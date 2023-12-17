@@ -13,4 +13,4 @@ if SHIELD_SBOARD_LEFT || SHIELD_SBOARD_RIGHT
 config ZMK_SPLIT
     default y
 
-#endif
+endif
