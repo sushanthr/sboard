@@ -1,0 +1,32 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+// ------------------------------------------------------------------
+// |  ESC  |  `    |  1  |  2   |  3   |  4   |  5   |   F1   |  F4 |
+// | CAPS  | TAB   |  Q  |  W   |  E   |  R   |  T   |   F2   |  F5 |                  
+// |  FnB  | FnY   |  A  |  S   |  D   |  F   |  G   |   F3   |  F6 |
+// | Tri   | SHIFT |  Z  |  X   |  C   |  V   |  B   |   __   |  __ | 
+// | CTRL  | GUI   | ALT |      |      |      |      |        |     |
+// |       |       |     |      |      |      |      |   FnB  | Del |
+// |       |       |     |      |      |      |      |  Ctrl  |  __ |                   
+            bindings = <
+&kp ESC     &kp GRAVE  &kp N1 &kp N2 &kp N3   &kp N4   &kp N5  &kp F1  &kp F4
+&kp CAPS    &kp TAB    &kp Q  &kp W  &kp E    &kp R    &kp T   &kp F2  &kp F5       
+&tog 1      &mo 2      &kp A  &kp S  &kp D    &kp F    &kp G   &kp F3  &kp F6
+&bootloader &kp LSHFT  &kp Z  &kp X  &kp C    &kp V    &kp B   &bt BT_SEL0  &bt BT_SEL1
+&kp LCTRL   &kp LGUI   kp LALT
+                                                               &mo 1     &kp DEL
+                                                               &kp LCTRL &kp LEFT
+            >;
+
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP  K_SCROLL_DOWN>;
+        };
+    };
+};
