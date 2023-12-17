@@ -21,7 +21,7 @@
 &kp CAPS    &kp TAB    &kp Q  &kp W  &kp E    &kp R    &kp T   &kp F2  &kp F5       
 &tog 1      &mo 2      &kp A  &kp S  &kp D    &kp F    &kp G   &kp F3  &kp F6
 &bootloader &kp LSHFT  &kp Z  &kp X  &kp C    &kp V    &kp B   &bt BT_SEL 0  &bt BT_SEL 1
-&kp LCTRL   &kp LGUI   kp LALT
+&kp LCTRL   &kp LGUI   &kp LALT
                                                                &mo 1     &kp DEL
                                                                &kp LCTRL &kp LEFT
             >;
