@@ -1,0 +1,18 @@
+#include "mouse.h"
+
+/ {
+	behaviors {
+		inc_dec_msc: behavior_sensor_rotate_mouse_movement {
+			compatible = "zmk,behavior-sensor-rotate-var";
+			label = "ENC_MOUSE_MOVEMENT";
+			#sensor-binding-cells = <2>;
+         	bindings = <&msc>, <&msc>;
+		};
+	};
+};
+
+&msc {
+    delay-ms = <0>;
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <750>;
+};
