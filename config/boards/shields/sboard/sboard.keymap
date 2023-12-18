@@ -9,6 +9,12 @@
 #define YELLOW  2
 #define SETTING 3
 
+&mwh {
+    delay-ms = <0>;
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <0>;
+};
+
 / {
     behaviors {
 		inc_dec_mwh: behavior_sensor_rotate_mouse_wheel {
@@ -18,12 +24,6 @@
          	bindings = <&mwh>, <&mwh>;
 		};
 	};
-
-    &mwh {
-        delay-ms = <0>;
-        acceleration-exponent = <1>;
-        time-to-max-speed-ms = <0>;
-    };
 
     keymap {
         compatible = "zmk,keymap";
