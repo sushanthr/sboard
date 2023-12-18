@@ -52,7 +52,7 @@
     left_encoder: left_encoder {
         compatible = "alps,ec11";
         label = "L_ENCODER";
-        resolution = <4>;
+        resolution = <1>;
         status = "okay";
 
         a-gpios = <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
