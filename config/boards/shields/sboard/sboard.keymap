@@ -47,7 +47,7 @@
                                                                &kp LCTRL &kp LEFT
             >;
 
-            sensor-bindings = <&inc_dec_mwh SCROLL_VERT(100)  SCROLL_VERT(-100)>;
+            sensor-bindings = <&inc_dec_mwh SCROLL_UP  SCROLL_DOWN>;
         };
 
         blue_layer {
