@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/mouse.h>
-#include "mouse.dtsi"
 
 #define BASE    0
 #define BLUE    1
@@ -11,6 +10,14 @@
 #define SETTING 3
 
 / {
+    behaviors {
+		inc_dec_mwh: behavior_sensor_rotate_mouse_wheel {
+			compatible = "zmk,behavior-sensor-rotate-var";
+			label = "ENC_MOUSE_WHEEL";
+         	bindings = <&mwh>, <&mwh>;
+		};
+	};
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -33,7 +40,7 @@
                                                                &kp LCTRL &kp LEFT
             >;
 
-            sensor-bindings = <&inc_dec_msc SCROLL_UP  SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_mwh SCROLL_UP  SCROLL_DOWN>;
         };
 
         blue_layer {
@@ -55,7 +62,7 @@
                                                                &trans &trans
             >;
 
-            sensor-bindings = <&inc_dec_msc SCROLL_UP  SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_mwh SCROLL_UP  SCROLL_DOWN>;
         };
 
         yellow_layer {            
@@ -69,7 +76,7 @@
                                                                &trans &trans
             >;
 
-            sensor-bindings = <&inc_dec_msc SCROLL_UP  SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_mwh SCROLL_UP  SCROLL_DOWN>;
         };
 
         setting_layer {                 
@@ -83,7 +90,7 @@
                                                        &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_msc SCROLL_UP  SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_mwh SCROLL_UP  SCROLL_DOWN>;
         };
     };
 };
