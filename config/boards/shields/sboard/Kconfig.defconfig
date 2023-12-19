@@ -13,7 +13,4 @@ if SHIELD_SBOARD_LEFT || SHIELD_SBOARD_RIGHT
 config ZMK_SPLIT
     default y
 
-config ZMK_SPLIT_BLE
-    default y
-
 endif
